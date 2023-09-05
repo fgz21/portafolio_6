@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+   font-family: Proxima Nova;
+}
+
+
+.swiper-pagination {
+    bottom: 0;
+    position: relative;
+  }
+
+  .swiper-container {
+    overflow: hidden;
+  }
+  .swiper-pagination-bullet{
+    background-color:rgb(14 211 207);
+  }
+  .swiper-pagination-bullet-active{
+    background-color:rgb(14 211 207);
+  }
+
+
+
+
+/*  another */
+
