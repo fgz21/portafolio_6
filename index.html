@@ -18,12 +18,12 @@
 
 <div class="w-full bg-gray-900">
     <div x-data="{ open: false }" class="flex max-w-screen-xl p-5 justify-between md:justify-center md:px-6 lg:px-8">
-        <div class="flex items-center justify-between lg:justify-start">
-            <a class="text-lg font-bold tracking-tighter text-cyan-500 transition duration-500 ease-in-out transform tracking-relaxed lg:pr-8" href="#">wickedblocks</a>
+        <div class="flex items-center justify-between lg:justify-start mt-3">
+            <a class="text-lg font-bold tracking-tighter text-cyan-500 transition duration-500 ease-in-out transform tracking-relaxed lg:pr-8" href="#">Home</a>
             <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">Toggle</button>
         </div>
 
-        <nav :class="{'flex': open, 'hidden': !open}" class="flex items-center justify-center flex-col md:flex-row lg:border-l-2 lg:pl-2">
+        <nav :class="{'flex': open, 'hidden': !open}" class="flex items-center justify-center flex-col md:flex-row lg:border-l-2 lg:pl-2 mt-3">
             <a class="text-lg font-bold tracking-tighter text-cyan-500 transition duration-500 ease-in-out transform tracking-relaxed lg:pr-8" href="#">Gallery</a>
             <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">Toggle</button>
             
