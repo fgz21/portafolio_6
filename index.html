@@ -8,153 +8,30 @@
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
   <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.css"rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<style>
-  .btn-70,
-.btn-70 *,
-.btn-70 :after,
-.btn-70 :before,
-.btn-70:after,
-.btn-70:before {
-  border: 0 solid;
-  box-sizing: border-box;
-}
-.btn-70 {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-appearance: button;
-  background-color: #000;
-  background-image: none;
-  color: #fff;
-  cursor: pointer;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
-    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  font-size: 100%;
-  line-height: 1.5;
-  margin: 0;
-  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
-  padding: 0;
-}
-.btn-70:disabled {
-  cursor: default;
-}
-.btn-70:-moz-focusring {
-  outline: auto;
-}
-.btn-70 svg {
-  display: block;
-  vertical-align: middle;
-}
-.btn-70 [hidden] {
-  display: none;
-}
-.btn-70 {
-  box-shadow: inset 0 0 0 2px #fff;
-  box-sizing: border-box;
-  display: block;
-  font-weight: 900;
-  padding: 1.2rem 3rem;
-  position: relative;
-  text-transform: uppercase;
-  transition: color 0.1s linear;
-}
-.btn-70:after,
-.btn-70:before {
-  content: "";
-  position: absolute;
-}
-.btn-70:before {
-  border-bottom: var(--border);
-  border-top: var(--border);
-  height: 100%;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-}
-.btn-70:hover:before {
-  --border: 4px solid #000;
-  -webkit-animation: border-top-and-bottom 1s forwards;
-  animation: border-top-and-bottom 1s forwards;
-}
-.btn-70:after {
-  border-left: var(--border);
-  border-right: var(--border);
-  bottom: 50%;
-  right: 0;
-  transform: translateY(50%);
-  width: 100%;
-  z-index: -1;
-}
-.btn-70:hover:after {
-  --border: 4px solid #000;
-  -webkit-animation: border-right-and-left 1s forwards;
-  animation: border-right-and-left 1s forwards;
-}
-@-webkit-keyframes border-top-and-bottom {
-  0% {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-@keyframes border-top-and-bottom {
-  0% {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-@-webkit-keyframes border-right-and-left {
-  0% {
-    height: 0;
-  }
-  to {
-    height: 100%;
-  }
-}
-@keyframes border-right-and-left {
-  0% {
-    height: 0;
-  }
-  to {
-    height: 100%;
-  }
-}
-
-</style>
 <body>
 
 
  <!-- header -->
 
-  <header class="flex justify-center items-center bg-gray-900 p-6">
-      <nav class="relative flex w-full flex-wrap items-center justify-center bg-gray-900 py-2 shadow-lg md:py-4 sm:flex-col">
-          <div class="flex w-full flex-wrap items-center justify-between px-3">
-              <nav class="w-full rounded-md" aria-label="breadcrumb">
-                  <ol class="list-reset ml-2 flex justify-center">
-                      <li>
-                          <a href="#" class="text-[#00ffff] text-lg transition duration-300 ease-in-out hover:text-[#00ffff] hover:bg-[#87e7ff] hover:ease-in-out dark:text-neutral-200 px-2 py-1 rounded-full hover:shadow-lg">Home</a>
-                      </li>
-                      <li>
-                          <span class="mx-2 text-[#00ffff] text-lg dark:text-neutral-200">/</span>
-                      </li>
-                      <li>
-                          <a href="#Gallery" class="text-[#00ffff] text-lg transition duration-300 ease-in-out hover:text-[#00ffff] hover:bg-[#87e7ff] hover:ease-in-out dark:text-neutral-200 px-2 py-1 rounded-full hover:shadow-lg">Gallery</a>
-                      </li>
-                      <li>
-                          <span class="mx-2 text-[#00ffff] text-lg dark:text-neutral-200">/</span>
-                      </li>
-                      <li>
-                          <a href="#Contact" class="text-[#00ffff] text-lg transition duration-300 ease-in-out hover:text-[#00ffff] hover:bg-[#87e7ff] hover:ease-in-out dark:text-neutral-200 px-2 py-1 rounded-full hover:shadow-lg">Contact</a>
-                      </li>
-                  </ol>
-              </nav>
-          </div>
-      </nav>
-  </header>
+<div class="w-full bg-gray-900">
+    <div x-data="{ open: false }" class="flex max-w-screen-xl p-5 justify-between md:justify-center md:px-6 lg:px-8">
+        <div class="flex items-center justify-between lg:justify-start">
+            <a class="text-lg font-bold tracking-tighter text-cyan-500 transition duration-500 ease-in-out transform tracking-relaxed lg:pr-8" href="#">wickedblocks</a>
+            <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">Toggle</button>
+        </div>
+
+        <nav :class="{'flex': open, 'hidden': !open}" class="flex items-center justify-center flex-col md:flex-row lg:border-l-2 lg:pl-2">
+            <a class="text-lg font-bold tracking-tighter text-cyan-500 transition duration-500 ease-in-out transform tracking-relaxed lg:pr-8" href="#">Gallery</a>
+            <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">Toggle</button>
+            
+            <a class="text-lg font-bold tracking-tighter text-cyan-500 transition duration-500 ease-in-out transform tracking-relaxed lg:pr-8" href="#">Contact</a>
+             <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">Toggle</button>
+        </nav>
+    </div>
+</div>
     <!-- Finish header -->
 
 
@@ -164,99 +41,51 @@
 
 
 
-  <section class="bg-gray-900 h-[60rem] sm:flex sm:justify-center md:flex md:justify-start lg:justify-end xl:justify-center">
-
-  <div class="min-h-screen flex justify-center">
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center z-10">
-      <div class="max-w-lg text-center sm:text-left ">
-       <h2 class="text-3xl font-bold text-cyan-500">
+  <section class="text-gray-600 body-font bg-gray-900">
+  <div class="container px-5 py-24 mx-auto flex flex-wrap">
+    <div class="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-1/2 sm:w-2/3 content-start sm:pr-10">
+     <div class="w-full sm:p-4 px-4 mb-6 text-center">
+       <h2 class="text-3xl font-bold text-cyan-500 mb-4">
           Francisco Gonzalez, Front-End Developer
       </h2>
-      <br>
-      <p class="text-2xl text-justify text-cyan-500">
-          Services for customers of all sizes, specializing in creating, modern websites, web services and App Web. My passion is to program and improve experiences through the bold interface and meaningful interactions.
-      </p>
-       
-        <div class="flex flex-col sm:flex-row items-center space-x-3 mt-5">
+        <h2 class="leading-relaxed text-justify text-cyan-500 text-lg">Services for customers of all sizes, specializing in creating modern websites, web services, and App Web. My passion is to program and improve experiences through bold interface and meaningful interactions.</h2>
+      </div>
 
-          <a href="https://github.com/fgz21" target="_blank" class="w-10rem h-10rem sm:w-12rem sm:h-12rem items-center justify-center inline-flex rounded-2rem font-bold text-lg sm:text-xl text-white hover:drop-shadow-lg cursor-pointer transition ease-in duration-300">
+       <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-wrap -m-4 text-center">
+      <div class="p-2 sm:w-1/4 w-1/2">
+       <a href="https://github.com/fgz21" target="_blank" class=" text-md px-4 py-2 rounded-lg bg-gray-900 text-white btn-70 ">
               <i class="fab fa-github text-white github"></i>
           </a>
-
-          <a href="https://www.linkedin.com/in/francisco-gonzalez-24b113197/" target="_blank" class="w-10rem h-10rem sm:w-12rem sm:h-12rem items-center justify-center inline-flex rounded-2rem font-bold text-lg sm:text-xl text-white bg-blue-400 hover:drop-shadow-lg cursor-pointer transition ease-in duration-300">
+      </div>
+      <div class="p-2 sm:w-1/4 w-1/2">
+       <a href="https://www.linkedin.com/in/francisco-gonzalez-24b113197/" target="_blank" class="text-md px-4 py-2 rounded-lg bg-gray-900 text-white btn-70 ">
               <i class="fab fa-linkedin"></i>
           </a>
+      </div>
 
-          <a href="https://www.instagram.com/fran.21z/?next=%2F" target="_blank" class="w-10rem h-10rem sm:w-12rem sm:h-12rem items-center justify-center inline-flex rounded-2rem font-bold text-lg sm:text-xl text-white bg-blue-500 hover:drop-shadow-lg cursor-pointer transition ease-in duration-300">
+      <div class="p-2 sm:w-1/4 w-1/2">
+        <a href="https://www.instagram.com/fran.21z/?next=%2F" target="_blank" class="text-md px-4 py-2 rounded-lg bg-gray-900 text-white btn-70">
               <i class="fab fa-instagram"></i>
           </a>
+      </div>
 
-          <a href="./CV- Francisco Gonzalez.pdf" download>
-            <button class="bg-gray-900  text-white font-bold py-2rem px-4rem sm:py-3rem sm:px-6rem border border-cyan-500 p-4 text-white btn-70">
-                <i class="fas fa-download"></i> Download CV
-            </button>
+      <div class="p-2 sm:w-1/4 w-1/2">
+        <a href="./CV- Francisco Gonzalez.pdf" download>
+          <button class="text-md px-4 py-2 rounded-lg bg-gray-900 text-white btn-70">
+            <i class="fas fa-download"></i> CV
+          </button>
         </a>
       </div>
+
     </div>
-
-
-    <div class="mx-0 max-w-xl flex rounded-2xl bg-indigo-700">
-      <div class="swiper-container flex-col flex self-center">
-          <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                  <blockquote class="text-left">
-                      <div class="relative">
-                          <div class="relative">
-                            <img src="img/fran3.jpg" alt="img" class="object-cover w-full md:w-full h-[20rem] md:h-[20rem] rounded-2xl mx-auto" />
-                            <div class="rounded-t-1rem bg-gradient-to-t from-gray-800 opacity-75 inset-0 z-0"></div>
-                        </div>
-                      </div>
-
-                      <div class="relative m-5 p-5">
-                          <svg class="absolute left-0 w-6 fill-indigo-500" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z" />
-                          </svg>
-                          <p class="text-gray-100 text-xl px-5">
-                              The programming is not just about code, but about solving problems.
-                          </p>
-                          <svg class="absolute right-0 w-6 fill-indigo-500" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M464 32H336c-26.5 0-48 21.5-48 48v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48zm-288 0H48C21.5 32 0 53.5 0 80v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48z" />
-                          </svg>
-                          <div class="text-sm mt-5 mx-5">
-                              <p class="font-medium text-white">Francisco Gonzalez</p>
-                              <p class="mt-1 text-gray-300"></p>
-                          </div>
-                      </div>
-                  </blockquote>
-              </div>
-
-          <div class="swiper-slide">
-            <blockquote class="text-left">
-              <div class="relative">
-                <div class="relative">
-                  <img
-                    src="img/fran3.jpg"
-                    alt="img"
-                    class="object-cover w-full md:w-full h-[20rem] md:h-[20rem] rounded-2xl mx-auto"
-                  />
-                  <div class="rounded-t-1xl bg-gradient-to-t from-gray-800 opacity-75 inset-0 z-0"></div>
-                </div>
-              </div>
-
-            <div class="relative relative m-5 p-5">
-              <svg class="absolute left-0 w-6 fill-indigo-500" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"/></svg>
-              <p class="text-gray-100 text-xl px-5">
-                Programming is the art of telling a computer what to do.
-              </p>
-              <svg class="absolute right-0 w-6 fill-indigo-500" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M464 32H336c-26.5 0-48 21.5-48 48v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48zm-288 0H48C21.5 32 0 53.5 0 80v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48z"/></svg>
-              <div class="text-sm mt-5 mx-5">
-                  <p class="font-medium text-white">Francisco Gonzalez</p>
-                  <p class="mt-1 text-gray-300"></p>
-              </div>
-            </div>
-          </blockquote>
-        </div>
-    </section>
+  </div>
+    </div>
+    <div class="lg:w-1/2 sm:w-1/3 w-full rounded-lg overflow-hidden mt-6 sm:mt-0">
+      <img class="object-cover object-center md:w-full h-[30rem] md:h-[30rem]" src="img/fran3.jpg" alt="stats">
+    </div>
+  </div>
+</section>
 
   <!-- finish firt section -->
 
@@ -496,9 +325,7 @@
           <span class="text-[#00ffff]">Email: Frandeveloper21@gmail.com</span>
         </a>
       </div>
-    </div>
-    
-    
+    </div>  
   </div>
 </section>
 
