@@ -44,7 +44,7 @@
   padding: 1.2rem 3rem;
   position: relative;
   text-transform: uppercase;
-  transition: color 0.1s linear;
+  transition: color 0.5s linear;
 }
 .btn-70:after,
 .btn-70:before {
@@ -61,8 +61,8 @@
 }
 .btn-70:hover:before {
   --border: 4px solid #000;
-  -webkit-animation: border-top-and-bottom 1s forwards;
-  animation: border-top-and-bottom 1s forwards;
+  -webkit-animation: border-top-and-bottom 0.3s forwards;
+  animation: border-top-and-bottom 0.3s forwards;
 }
 .btn-70:after {
   border-left: var(--border);
