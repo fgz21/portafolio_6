@@ -1,3 +1,24 @@
+@screen md {
+    .nav-link {
+        padding: 1rem; /* Ajustar el padding en pantallas medianas y más grandes */
+    }
+}
+
+@screen lg {
+    .nav-link {
+        padding: 1.5rem; /* Ajustar el padding en pantallas grandes y más grandes */
+    }
+}
+
+@screen xl {
+    .nav-link {
+        padding: 2rem; /* Ajustar el padding en pantallas extra grandes */
+    }
+}
+
+
+
+
 .btn-70,
 .btn-70 *,
 .btn-70 :after,
