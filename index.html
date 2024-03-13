@@ -20,19 +20,16 @@
 
  <!-- header -->
 
-<div class="  w-full bg-gray-900 nav-link sticky top-0">
-    <div x-data="{ open: false }" class=" nav-link flex max-w-screen-xl p-5 justify-between md:justify-center md:px-6 lg:px-8">
-        <div class="flex items-center justify-between lg:justify-start mt-3">
-            <a class="text-lg font-bold tracking-tighter text-cyan-500 transition duration-500 ease-in-out transform tracking-relaxed md:border-r lg:pr-8" href="#Home">Home</a>
-        </div>
+<nav class="bg-gray-900 text-white">
+    <div class="container flex items-center justify-center p-6 mx-auto text-cyan-500  capitalize dark:text-cyan-400">
+        <a href="#Home" class="text-lg text-cyan-500  dark:text-gray-200 hover:text-cyan-400 border-b-2 mx-1.5 sm:mx-6 btn-70">Home</a>
+      
+        <a href="#Gallery" class="border-b-2 text-lg text-cyan-500 border-transparent hover:text-cyan-400 dark:hover:text-gray-200 hover:border-cyan-400 mx-1.5 sm:mx-6 btn-70 ">Gallery</a>
 
-        <nav :class="{'flex': open, 'hidden': !open}" class="flex flex-col items-center md:flex-row lg:border-l-2 lg:pl-2 mt-3">
-            <a class="text-lg font-bold tracking-tighter text-cyan-500 transition duration-500 ease-in-out transform tracking-relaxed md:border-r lg:pr-3 w-full mx-auto mb-1.5 md:mb-0 whitespace-nowrap md:ml-2" href="#Gallery">Gallery</a>
+        <a href="#Contact" class="border-b-2 text-lg text-cyan-500 border-transparent hover:text-cyan-400 dark:hover:text-gray-200 hover:border-cyan-400 mx-1.5 sm:mx-6 btn-70 ">Contact</a>
 
-            <a class="text-lg font-bold tracking-tighter text-cyan-500 transition duration-500 ease-in-out transform tracking-relaxed md:pl-0 lg:pl-3 mb-1.5 md:mb-0 whitespace-nowrap md:ml-2" href="#Contact">Contact</a>
-        </nav>
     </div>
-</div>
+</nav>
     <!-- Finish header -->
 
 
@@ -104,7 +101,7 @@
           <div class="relative">
               <img class="h-auto max-w-full rounded-lg p-5" src="img/blog.png" alt="Blog Image">
               <div class="absolute bg-white text-dark text-center py-2 px-4 rounded-lg bottom-full left-1/2 transform -translate-x-1/2 opacity-0 transition-opacity duration-300 invisible tooltip">
-                Blog about management and marketing done by my university
+                Blog <br> Management and marketing done by my university
               </div>
           </div>
           <button class="transition duration-500 ease-in-out bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2 btn-70">
