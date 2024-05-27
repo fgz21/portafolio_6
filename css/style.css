@@ -249,24 +249,10 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 .relative:hover .tooltip {
     opacity: 1;
     visibility: visible;
 }
-
-
-
 
 
 [data-tooltip="tooltip"] {
