@@ -34,44 +34,44 @@ function App() {
     {
       name: 'Blog UNELLEZ',
       category: 'Blog',
-      image: './src/assets/img/blog.png',
+      image: 'assets/img/blog.png',
       description: 'Blog created to my University, about Marketing and Gerence.',
       url: 'https://example.com/blog-unellez'
     },
     {
       name: 'Servicio Comunitario',
       category: 'Proyect',
-      image: './src/assets/img/comunitario.png',
+      image: 'assets/img/comunitario.png',
       description: 'Simple App created to Community Service in the University.',
     },
     {
       name: 'Inmobiliario',
       category: 'Lading',
-      image: './src/assets/img/inmobiliario.png',
+      image: 'assets/img/inmobiliario.png',
       description: 'Lading Page about Business Inmobiliary.',
     },
     {
       name: 'Restaurant',
       category: 'Lading',
-      image: './src/assets/img/restaurand.png',
+      image: 'assets/img/restaurand.png',
       description: 'Lading Page created to Restaurant food chinese.',
     },
     {
       name: 'Currency App',
       category: 'Proyect',
-      image: './src/assets/img/currency.png',
+      image: 'assets/img/Currency.png',
       description: 'Currency App, to see the price of USD and BS.',
     },
     {
       name: 'Crash Desing Test',
       category: 'Proyect', 
-      image: './src/assets/img/crash bandicoot.png',
+      image: 'assets/img/crash bandicoot.png',
       description: 'A test chicksgold.com to Apply Proyect. ',
     },
     {
       name: 'CamarasCCTV',
       category: 'Lading',
-      image: './src/assets/img/camaras.png',
+      image: 'assets/img/camaras.png',
       description: 'Landing page, business about physical camera placement.',
     },
   ];
@@ -146,7 +146,7 @@ function App() {
             <p className="mt-4 text-sky-500 domino delay-300">I'm passionate about technology and innovation. I enjoy learning new skills and improving my knowledge in the field of web development.</p>
             <div className="mt-12 domino">
               <a 
-                href="./src/assets/CV_FRAN.pdf"
+                href="/assets/CV_FRAN.pdf"
                 download="CV_FRAN.pdf"
                 className="bg-blue-700 hover:bg-blue-500 text-white font-bold py-2 px-2 rounded cursor-pointer"
               >
@@ -155,7 +155,7 @@ function App() {
             </div>
           </div>
           <div className="lg:w-6/4 xl:w-1/2 p-6 flex justify-center md:w-full sm:w-full xs:w-full">
-            <img src="./src/assets/img/fran3.jpg" alt="Profile picture" className="rounded-full object-cover w-64 h-64 lg:w-64 lg:h-64 xl:w-80 xl:h-80 mx-auto shadow-md domino delay-500"/>
+            <img src="/assets/img/fran3.jpg" alt="Profile picture" className="rounded-full object-cover w-64 h-64 lg:w-64 lg:h-64 xl:w-80 xl:h-80 mx-auto shadow-md domino delay-500"/>
           </div>
         </div>
         <div className="flex justify-center mt-8">
