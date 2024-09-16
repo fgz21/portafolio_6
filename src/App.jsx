@@ -142,16 +142,25 @@ function App() {
         <div className="container mx-auto p-4 pt-6 md:p-6 lg:p-12 flex flex-col lg:flex-row items-center justify-center h-full">
           <div className="lg:w-1/2 xl:w-1/2 p-6 text-lg lg:text-xl xs:w-4/5 sm:w-3/4 md:w-full">
             <h1 className="text-4xl lg:text-6xl font-bold text-sky-500 domino">Welcome to my portfolio</h1>
-            <p className="mt-4 text-sky-500 domino delay-200">I'm a frontend developer passionate about creating beautiful and functional websites.</p>
-            <p className="mt-4 text-sky-500 domino delay-300">I'm passionate about technology and innovation. I enjoy learning new skills and improving my knowledge in the field of web development.</p>
-            <div className="mt-12 domino">
-              <a 
-                href="/assets/CV_FRAN.pdf"
-                download="CV_FRAN.pdf"
-                className="bg-blue-700 hover:bg-blue-500 text-white font-bold py-2 px-2 rounded cursor-pointer"
+            <p className="mt-4 text-sky-500 domino delay-200">
+              I'm a frontend developer passionate about crafting digital experiences that blend aesthetics with functionality, driven by a passion for building websites that inspire and captivate.
+            </p>
+            <p className="mt-4 text-sky-500 domino delay-300">
+             With a thirst for knowledge and a passion for innovation, I enjoy experimenting with new challenges using the latest trends and technologies in web development, to deliver solutions for future digital applications.
+            </p>
+            <div className="mt-12 ">
+              <button 
+                className="btn-39 text-white font-bold py-2 px-2 rounded w-md"
               >
-                Download CV
-              </a>
+                <span className="new">Download CV</span>
+                <span className="old"></span>
+                <a 
+                  href="/assets/CV_FRAN.pdf"
+                  download="CV_FRAN.pdf"
+                >
+                  Download CV
+                </a>
+              </button>
             </div>
           </div>
           <div className="lg:w-6/4 xl:w-1/2 p-6 flex justify-center md:w-full sm:w-full xs:w-full">
