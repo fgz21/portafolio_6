@@ -98,7 +98,7 @@ function App() {
  
 
   return (
-    <div className="w-full" id="home">
+    <div className="" id="home">
       <nav className="bg-gray-800 text-white p-4 md:p-4 flex justify-around md:flex-row lg:flex-row xl:flex-row">
         <div className="flex items-center">
           <h1 className="text-2xl btn-39">
@@ -150,7 +150,7 @@ function App() {
                 download="CV_FRAN.pdf"
                 className="bg-blue-700 hover:bg-blue-500 text-white font-bold py-2 px-2 rounded cursor-pointer"
               >
-                Click here to download my CV
+                Download CV
               </a>
             </div>
           </div>
@@ -158,24 +158,27 @@ function App() {
             <img src="/assets/img/fran3.jpg" alt="Profile picture" className="rounded-full object-cover w-64 h-64 lg:w-64 lg:h-64 xl:w-80 xl:h-80 mx-auto shadow-md domino delay-500"/>
           </div>
         </div>
-        <div className="flex justify-center mt-8">
-          <i className="fab fa-html5 fa-5x mr-4 text-orange-500 domino"></i>
-          <i className="fab fa-css3 fa-5x mr-4 text-blue-500 domino"></i>
-          <i className="fas fa-leaf fa-5x mr-4 text-green-500 domino"></i>
-          <i className="fab fa-bootstrap fa-5x mr-4 text-purple-500 domino"></i>
-          <i className="fab fa-js fa-5x mr-4 text-yellow-500 domino"></i>
-          <i className="fab fa-react fa-5x mr-4 text-blue-500 domino"></i>
-          <i className="fab fa-vuejs fa-5x mr-4 text-green-500 domino"></i>
-          <i className="fab fa-node fa-5x mr-4 text-green-500 domino"></i>
-          <i className="fas fa-database fa-5x mr-4 text-blue-500 domino"></i>
-        </div>
+          
+          <div className="flex justify-center mt-8 mb-4">
+            <div className="grid grid-cols-3 gap-4 md:grid-cols-2 lg:grid-cols-3">
+              <i className="fab fa-html5 fa-5x text-orange-500 domino mx-4"></i>
+              <i className="fab fa-css3 fa-5x text-blue-500 domino mx-4"></i>
+              <i className="fas fa-leaf fa-5x text-green-500 domino mx-4"></i>
+              <i className="fab fa-bootstrap fa-5x text-purple-500 domino mx-4"></i>
+              <i className="fab fa-js fa-5x text-yellow-500 domino mx-4"></i>
+              <i className="fab fa-react fa-5x text-blue-500 domino mx-4"></i>
+              <i className="fab fa-vuejs fa-5x text-green-500 domino mx-4"></i>
+              <i className="fab fa-node fa-5x text-green-500 domino mx-4"></i>
+              <i className="fas fa-database fa-5x text-blue-500 domino mx-4"></i>
+            </div>
+          </div>
       </section>
 
 
 
-      <section className="py-20 dark:bg-gray-900">
-        <div className="container mx-auto p-4 lg:p-8 xl:p-12 pt-12">
-        <h2 className="text-7xl text-blue-700 font-bold text-center mt-32 mb-12" id="Gallery">Gallery</h2>
+      <section className="py-20  bg-gray-900 ">
+        <div className="container mx-auto p-8 lg:p-8 xl:p-12 pt-16">
+        <h2 className="text-7xl text-blue-700 font-bold text-center mt-80 mb-12" id="Gallery">Gallery</h2>
           <div className="flex justify-center mb-8">
             <select
               value={selectedCategory}
@@ -216,41 +219,40 @@ function App() {
 
 
     <footer className="bg-cover bg-center bg-gray-900 h-md py-4 overflow-y-auto" id="Contact">
-      <div className="container mx-auto p-8 lg:p-12 xl:p-16 flex flex-col items-center">
-        <h2 className="text-7xl text-blue-700 font-bold text-center mb-12">Contact</h2>
-        <div className="flex justify-center">
-          <div className="relative group mr-8">
-            <button
-              className="bg-white rounded-lg p-8 w-12/12 xl:w-3/7 domino"
-              onClick={() => {
-                handleCopyEmail();
-                notify("Email copied to clipboard!"); 
-              }}
-            >
-              <p className="text-md text-gray-600 text-center">frandeveloper21@gmail.com</p>
-            </button>
-            <ToastContainer />
-            <div className="absolute bottom-0 right-0 mb-4 mr-4 tooltip opacity-0 group-hover:opacity-100 transition duration-300">
-              <span className="bg-gray-900 text-white py-1 px-2 rounded-lg text-xs">Click to copy Email</span>
-            </div>
-          </div>
-
-          <div className="relative group mr-8">
-          <button
-            className="bg-white rounded-lg p-8 w-12/12 xl:w-3/7 domino"
-            onClick={() => window.open('https://github.com/fgz21', '_blank')}
-          >
-            <i className="fab fa-github text-gray-600 text-center text-md mr-2"></i>
-            <p className="text-md text-gray-600 text-center">Click to visit my GitHub Profile</p>
-          </button>
-          <div className="absolute bottom-0 right-0 mb-4 mr-4 tooltip opacity-0 group-hover:opacity-100 transition duration-300">
-            <span className="bg-gray-900 text-white py-1 px-2 rounded-lg text-xs">Visit GitHub</span>
-          </div>
-        </div>
-        
+  <div className="container mx-auto p-4 lg:p-8 xl:p-8 flex flex-col items-center">
+    <h2 className="text-7xl text-blue-700 font-bold text-center mb-12">Contact</h2>
+    <div className="flex justify-center flex-wrap sm:flex-nowrap">
+      <div className="relative group mr-8 sm:mr-8 mb-8 sm:mb-0">
+        <button
+          className="bg-white rounded-lg p-8 w-full sm:w-12/12 xl:w-3/7 domino"
+          onClick={() => {
+            handleCopyEmail();
+            notify("Email copied to clipboard!"); 
+          }}
+        >
+          <p className="text-md text-gray-600 text-center">frandeveloper21@gmail.com</p>
+        </button>
+        <ToastContainer />
+        <div className="absolute bottom-0 right-0 mb-4 mr-4 tooltip opacity-0 group-hover:opacity-100 transition duration-300">
+          <span className="bg-gray-900 text-white py-1 px-2 rounded-lg text-xs">Click to copy Email</span>
         </div>
       </div>
-    </footer>
+
+      <div className="relative group mr-8 sm:mr-8 mb-8 sm:mb-0">
+        <button
+          className="bg-white rounded-lg p-8 w-full sm:w-12/12 xl:w-3/7 domino"
+          onClick={() => window.open('https://github.com/fgz21', '_blank')}
+        >
+          <i className="fab fa-github text-gray-600 text-center text-md mr-2"></i>
+          <p className="text-md text-gray-600 text-center">Click to visit my GitHub Profile</p>
+        </button>
+        <div className="absolute bottom-0 right-0 mb-4 mr-4 tooltip opacity-0 group-hover:opacity-100 transition duration-300">
+          <span className="bg-gray-900 text-white py-1 px-2 rounded-lg text-xs">Visit GitHub</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
     </div>
   );
