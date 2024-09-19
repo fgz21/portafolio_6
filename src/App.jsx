@@ -36,43 +36,49 @@ function App() {
       category: 'Blog',
       image: 'assets/img/blog.png',
       description: 'Blog created to my University, about Marketing and Gerence.',
-      url: 'https://example.com/blog-unellez'
+      url: 'https://blog-unellez.netlify.app/'
     },
     {
       name: 'Servicio Comunitario',
       category: 'Proyect',
       image: 'assets/img/comunitario.png',
       description: 'Simple App created to Community Service in the University.',
+      url: 'https://servicio-comunitario-fgz.netlify.app/'
     },
     {
       name: 'Inmobiliario',
       category: 'Lading',
       image: 'assets/img/inmobiliario.png',
       description: 'Lading Page about Business Inmobiliary.',
+      url: 'https://fran-inmobiliario.netlify.app/'
     },
     {
       name: 'Restaurant',
       category: 'Lading',
       image: 'assets/img/restaurand.png',
       description: 'Lading Page created to Restaurant food chinese.',
+      url: 'https://chinese-and-grill.netlify.app/'
     },
     {
       name: 'Currency App',
       category: 'Proyect',
       image: 'assets/img/Currency.png',
       description: 'Currency App, to see the price of USD and BS.',
+      url: 'https://currency-converter-fran.netlify.app/'
     },
     {
       name: 'Crash Desing Test',
       category: 'Proyect', 
       image: 'assets/img/crash bandicoot.png',
       description: 'A test chicksgold.com to Apply Proyect. ',
+      url: 'https://fran-practice-chicksgold.netlify.app/'
     },
     {
       name: 'CamarasCCTV',
       category: 'Lading',
       image: 'assets/img/camaras.png',
       description: 'Landing page, business about physical camera placement.',
+      url: 'https://jrsecurity22cam.vercel.app/'
     },
   ];
 
@@ -202,26 +208,26 @@ function App() {
             </select>
           </div>
 
-          <div
-            className={`grid lg:grid-cols-3 gap-8 ${animate ? 'animate-flyIn' : ''}`}
-          >
-            {filteredImg.map((product) => (
-              <div key={product.name} className="bg-white rounded-lg overflow-hidden flex flex-row justify-center">
-                <div className="w-60 h-48">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="object-cover h-full w-full hover:scale-110 transition duration-300 ease-in-out"
-                    style={{ maxWidth: '100%', height: '100%' }}
-                  />
+          <div className={`grid lg:grid-cols-3 gap-8 ${animate ? 'animate-flyIn' : ''}`}>
+              {filteredImg.map((product) => (
+                <div key={product.name} className="bg-white rounded-lg overflow-hidden flex flex-row justify-center">
+                  <div className="w-60 h-48">
+                    <a href={product.url} target="_blank" rel="noopener noreferrer">
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="object-cover h-full w-full hover:scale-110 transition duration-300 ease-in-out"
+                        style={{ maxWidth: '100%', height: '100%' }}
+                      />
+                    </a>
+                  </div>
+                  <div className="w-1/2 pl-4">
+                    <h2 className="text-lg font-medium text-gray-700 p-4">{product.name}</h2>
+                    <p className="text-sm text-gray-500">{product.description}</p>
+                  </div>
                 </div>
-                <div className="w-1/2 pl-4">
-                  <h2 className="text-lg font-medium text-gray-700 p-4">{product.name}</h2>
-                  <p className="text-sm text-gray-500">{product.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
         </div>
       </section>
 
