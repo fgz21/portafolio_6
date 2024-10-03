@@ -14,7 +14,7 @@ function App() {
 
 
   const handleCopyEmail = () => {
-  // código para copiar el email
+ 
   navigator.clipboard.writeText('frandeveloper21@gmail.com');
 };
 
@@ -39,14 +39,14 @@ function App() {
       url: 'https://blog-unellez.netlify.app/'
     },
     {
-      name: 'Servicio Comunitario',
+      name: 'Community Service',
       category: 'Proyect',
       image: 'assets/img/comunitario.png',
       description: 'Simple App created to Community Service in the University.',
       url: 'https://servicio-comunitario-fgz.netlify.app/'
     },
     {
-      name: 'Inmobiliario',
+      name: 'Inmobiliary',
       category: 'Lading',
       image: 'assets/img/inmobiliario.png',
       description: 'Lading Page about Business Inmobiliary.',
@@ -74,7 +74,7 @@ function App() {
       url: 'https://fran-practice-chicksgold.netlify.app/'
     },
     {
-      name: 'CamarasCCTV',
+      name: 'CameraCCTV',
       category: 'Lading',
       image: 'assets/img/camaras.png',
       description: 'Landing page, business about physical camera placement.',
@@ -94,7 +94,7 @@ function App() {
     setAnimate(true);
     setTimeout(() => {
       setAnimate(false);
-    }, 500); // ajusta el tiempo de la animación
+    }, 500); 
   };
 
 
@@ -234,41 +234,40 @@ function App() {
 
 
     <footer className="bg-cover bg-center bg-gray-900 h-md py-4 overflow-y-auto" id="Contact">
-  <div className="container mx-auto p-4 lg:p-8 xl:p-8 flex flex-col items-center">
-    <h2 className="text-7xl text-blue-700 font-bold text-center mb-12">Contact</h2>
-    <div className="flex justify-center flex-wrap sm:flex-nowrap">
-      <div className="relative group mr-8 sm:mr-8 mb-8 sm:mb-0">
-        <button
-          className="bg-white rounded-lg p-8 w-full sm:w-12/12 xl:w-3/7 domino"
-          onClick={() => {
-            handleCopyEmail();
-            notify("Email copied to clipboard!"); 
-          }}
-        >
-          <p className="text-md text-gray-600 text-center">frandeveloper21@gmail.com</p>
-        </button>
-        <ToastContainer />
-        <div className="absolute bottom-0 right-0 mb-4 mr-4 tooltip opacity-0 group-hover:opacity-100 transition duration-300">
-          <span className="bg-gray-900 text-white py-1 px-2 rounded-lg text-xs">Click to copy Email</span>
-        </div>
-      </div>
+        <div className="container mx-auto p-4 lg:p-8 xl:p-8 flex flex-col items-center">
+          <h2 className="text-7xl text-blue-700 font-bold text-center mb-12">Contact</h2>
+          <div className="flex justify-center flex-wrap sm:flex-nowrap">
+            <div className="relative group mr-8 sm:mr-8 mb-8 sm:mb-0">
+              <button
+                className="bg-white rounded-lg p-8 w-full sm:w-12/12 xl:w-3/7 domino"
+                onClick={() => {
+                  handleCopyEmail();
+                  notify("Email copied to clipboard!"); 
+                }}
+              >
+                <p className="text-md text-gray-600 text-center">frandeveloper21@gmail.com</p>
+              </button>
+              <ToastContainer />
+              <div className="absolute bottom-0 right-0 mb-4 mr-4 tooltip opacity-0 group-hover:opacity-100 transition duration-300">
+                <span className="bg-gray-900 text-white py-1 px-2 rounded-lg text-xs">Click to copy Email</span>
+              </div>
+            </div>
 
-      <div className="relative group mr-8 sm:mr-8 mb-8 sm:mb-0">
-        <button
-          className="bg-white rounded-lg p-8 w-full sm:w-12/12 xl:w-3/7 domino"
-          onClick={() => window.open('https://github.com/fgz21', '_blank')}
-        >
-          <i className="fab fa-github text-gray-600 text-center text-md mr-2"></i>
-          <p className="text-md text-gray-600 text-center">Click to visit my GitHub Profile</p>
-        </button>
-        <div className="absolute bottom-0 right-0 mb-4 mr-4 tooltip opacity-0 group-hover:opacity-100 transition duration-300">
-          <span className="bg-gray-900 text-white py-1 px-2 rounded-lg text-xs">Visit GitHub</span>
+            <div className="relative group mr-8 sm:mr-8 mb-8 sm:mb-0">
+              <button
+                className="bg-white rounded-lg p-8 w-full sm:w-12/12 xl:w-3/7 domino"
+                onClick={() => window.open('https://github.com/fgz21', '_blank')}
+              >
+                <i className="fab fa-github text-gray-600 text-center text-md mr-2"></i>
+                <p className="text-md text-gray-600 text-center">Click to visit my GitHub Profile</p>
+              </button>
+              <div className="absolute bottom-0 right-0 mb-4 mr-4 tooltip opacity-0 group-hover:opacity-100 transition duration-300">
+                <span className="bg-gray-900 text-white py-1 px-2 rounded-lg text-xs">Visit GitHub</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
+      </footer>
     </div>
   );
 }
