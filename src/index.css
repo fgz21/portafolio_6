@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @keyframes flyIn {
   0% {
     opacity: 0;
@@ -32,15 +30,12 @@
 
 /* fonts */
 
-
-
 body {
   font-family: 'Century Gothic', sans-serif;
 
 }
 
-
-
+/* Effect hover navbar */
 .domino {
   transition: opacity 0.5s, transform 0.5s;
 }
@@ -49,7 +44,6 @@ body {
   opacity: 1;
   transform: translateY(-10px);
 }
-
 
 
 .btn-39,
@@ -125,27 +119,3 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* add a subtle box shadow on hover */
 }
 
-/* responsive here */
-
-
-/* the nav */
-
-
-/* Mobile (max-width: 739px) */
-
-
-
-
-
-
-
-
-
-/* the nav */
-
-
-
-
-
-
-/* responsive here */

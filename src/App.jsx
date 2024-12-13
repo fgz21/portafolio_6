@@ -4,8 +4,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import { Link, animateScroll as scroll } from 'react-scroll';
 
-
-
 function App() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [animate, setAnimate] = useState(false);
@@ -17,10 +15,6 @@ function App() {
  
   navigator.clipboard.writeText('frandeveloper21@gmail.com');
 };
-
-
-
-
 
 
   const categories = [
@@ -80,6 +74,15 @@ function App() {
       description: 'Landing page, business about physical camera placement.',
       url: 'https://jrsecurity22cam.vercel.app/'
     },
+
+    {
+      name: 'Ganaderia Barinas',
+      category: 'Lading',
+      image: 'assets/img/Ganaderia.png',
+      description: 'Landing page, Livestock farming in Barinas is essential for the local economy, standing out in the production of high-quality meat and milk.',
+      url: 'https://ganaderia-fran.netlify.app'
+    },
+
   ];
 
   const filteredImg = products.filter((product) => {
@@ -97,11 +100,6 @@ function App() {
     }, 500); 
   };
 
-
-
-
-
- 
 
   return (
     <div className="container mx-auto px-12 bg-gray-900" id="home">
@@ -188,9 +186,9 @@ function App() {
 
 
 
-      <section className="py-20  bg-gray-900 ">
+      <section className="py-20 bg-gray-900">
         <div className="container mx-auto p-8 lg:p-8 xl:p-12 pt-16">
-        <h2 className="text-7xl text-blue-700 font-bold text-center mt-80 mb-12" id="Projects">Projects</h2>
+          <h2 className="text-7xl text-blue-700 font-bold text-center mt-80 mb-12" id="Projects">Projects</h2>
           <div className="flex justify-center mb-8">
             <select
               value={selectedCategory}
@@ -206,29 +204,24 @@ function App() {
           </div>
 
           <div className={`grid lg:grid-cols-3 gap-8 ${animate ? 'animate-flyIn' : ''}`}>
-              {filteredImg.map((product) => (
-                <div key={product.name} className="bg-white rounded-lg overflow-hidden flex flex-row justify-center">
-                  <div className="w-60 h-48">
-                    <a href={product.url} target="_blank" rel="noopener noreferrer">
-                      <img
-                        src={product.image}
-                        alt={product.name}
-                        className="object-cover h-full w-full hover:scale-110 transition duration-300 ease-in-out"
-                        style={{ maxWidth: '100%', height: '100%' }}
-                      />
-                    </a>
-                  </div>
-                  <div className="w-1/2 pl-4">
-                    <h2 className="text-lg font-medium text-gray-700 p-4">{product.name}</h2>
-                    <p className="text-sm text-gray-500">{product.description}</p>
-                  </div>
+            {filteredImg.map((product) => (
+              <div key={product.name} className="bg-white rounded-lg overflow-hidden shadow-md flex flex-col">
+                <a href={product.url} target="_blank" rel="noopener noreferrer" className="flex-grow">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="object-cover h-48 w-full hover:scale-110 transition duration-300 ease-in-out"
+                  />
+                </a>
+                <div className="p-4 flex flex-col flex-grow">
+                  <h2 className="text-lg font-medium text-gray-700 truncate">{product.name}</h2>
+                  <p className="text-sm text-gray-500 flex-grow">{product.description}</p>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
-
-
 
     <footer className="bg-cover bg-center bg-gray-900 h-md py-4 overflow-y-auto" id="Contact">
         <div className="container mx-auto p-4 lg:p-8 xl:p-8 flex flex-col items-center">
