@@ -5,12 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-   extend: {
+    extend: {
+      fontFamily: {
+        sans: ['Roboto', 'sans-serif'], 
+      },
       animation: {
-         flyIn: 'flyIn 0.5s ease-in-out',
+        flyIn: 'flyIn 0.5s ease-in-out',
       },
     },
   },
   variants: {},
   plugins: [],
-}
+};
