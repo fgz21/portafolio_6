@@ -65,6 +65,21 @@ const Navbar = () => {
               Home
             </Link>
           </li>
+
+          <li>
+            <Link
+              to="Timeline"
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="text-white hover:text-sky-500 transition duration-300 font-medium py-2 border-b-2 border-transparent hover:border-sky-500 cursor-pointer"
+            >
+              Work Experience
+            </Link>
+          </li>
+
+
+
           <li>
             <Link
               to="projects"

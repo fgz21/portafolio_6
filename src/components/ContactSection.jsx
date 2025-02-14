@@ -9,7 +9,7 @@ const ContactSection = () => {
   };
 
   return (
-    <footer className="bg-[#B3B4BD] py-20">
+    <footer className="bg-[#B3B4BD] py-20" id="contact">
       <div className="container mx-auto text-center">
         
         <h2 className="text-7xl text-blue-700 font-punk text-center mb-12" style={{ fontFamily: 'Permanent Marker, cursive' }}>

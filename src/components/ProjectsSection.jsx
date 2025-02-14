@@ -76,7 +76,7 @@ const ProjectsSection = () => {
   );
 
   return (
-    <section className="py-20 bg-gray-800">
+    <section className="py-20 bg-gray-800" id="projects">
       {/* Título con estilo punk */}
       <h2 className="text-7xl text-blue-700 font-punk text-center mb-12" style={{ fontFamily: 'Permanent Marker, cursive' }}>
         Projects
