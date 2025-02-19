@@ -31,7 +31,7 @@ const products = [
     url: 'https://fran-inmobiliario.netlify.app/',
   },
   {
-    name: 'Restaurant',
+    name: 'Chinese Restaurant',
     category: 'Lading',
     image: 'assets/img/restaurand.png',
     description: 'Lading Page created to Restaurant food chinese.',
@@ -59,7 +59,7 @@ const products = [
     url: 'https://jrsecurity22cam.vercel.app/',
   },
   {
-    name: 'Ganaderia Barinas',
+    name: 'Livestock farming from Barinas',
     category: 'Lading',
     image: 'assets/img/Ganaderia.png',
     description:
@@ -111,7 +111,7 @@ const ProjectsSection = () => {
               />
             </a>
             <div className="p-6 flex flex-col flex-grow">
-              {/* Título de la tarjeta con estilo punk */}
+              
               <h2
                 className="text-2xl font-punk text-gray-800 mb-2"
                 style={{ fontFamily: 'Permanent Marker, cursive' }}

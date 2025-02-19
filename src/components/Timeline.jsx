@@ -50,7 +50,12 @@ const Timeline = () => {
               
               <Card className="ml-8 bg-gray-800 p-6 rounded-lg shadow-lg flex-1">
                 <Card.Content>
-                  <Card.Header className="text-white">{experience.title}</Card.Header>
+                  <Card.Header 
+                    className="text-white" 
+                    style={{ fontFamily: 'Permanent Marker, cursive' }}
+                  >
+                    {experience.title}
+                  </Card.Header>
                   <Card.Meta className="text-gray-400">{experience.year}</Card.Meta>
                   <Card.Description className="text-gray-400">
                     {experience.description}
