@@ -8,10 +8,10 @@ const HeroSection = () => {
           {/* Texto y Descripción */}
           <div className="max-w-lg">
             <h1 className="text-3xl font-extrabold text-gray-100 sm:text-4xl">
-              Front-End Developer
+              Full Stack Web Developer
             </h1>
             <p className="mt-4 text-gray-100 text-lg">
-              Developer with 3 years of experience in web development focused on front-end, with expertise in HTML, CSS, JavaScript, and frameworks like React and Vue. Skilled in creating engaging user interfaces and optimizing web performance. Passionate about building SaaS applications and delivering impactful tech solutions.
+              Developer with 4 years of experience in web development focused on front-end, with expertise in HTML, CSS, JavaScript, and frameworks like React and Vue. Skilled in creating engaging user interfaces and optimizing web performance. Passionate about building SaaS applications and delivering impactful tech solutions.
             </p>
             <div className="mt-8">
               <a
@@ -85,14 +85,44 @@ const HeroSection = () => {
               <span className="mt-2 text-gray-100">Bootstrap</span>
             </div>
 
-            {/* Ícono de Next.js */}
+            {/* Ícono de Vite */}
             <div className="flex flex-col items-center">
               <img
-                src="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg"
-                alt="Next.js"
+                src="https://vitejs.dev/logo.svg"
+                alt="Vite"
                 className="w-12 h-12 hover:opacity-75 transition duration-300"
               />
-              <span className="mt-2 text-gray-100">Next.js</span>
+              <span className="mt-2 text-gray-100">Vite</span>
+            </div>
+
+            {/* Ícono de PostgreSQL */}
+            <div className="flex flex-col items-center">
+              <img
+                src="https://cdn.worldvectorlogo.com/logos/postgresql.svg"
+                alt="PostgreSQL"
+                className="w-12 h-12 hover:opacity-75 transition duration-300"
+              />
+              <span className="mt-2 text-gray-100">PostgreSQL</span>
+            </div>
+
+            {/* Ícono de Express.js */}
+            <div className="flex flex-col items-center">
+              <img
+                src="https://cdn.worldvectorlogo.com/logos/express-109.svg"
+                alt="Express.js"
+                className="w-12 h-12 hover:opacity-75 transition duration-300"
+              />
+              <span className="mt-2 text-gray-100">Express.js</span>
+            </div>
+
+            {/* Ícono de AWS */}
+            <div className="flex flex-col items-center">
+              <img
+                src="https://cdn.worldvectorlogo.com/logos/aws-2.svg"
+                alt="AWS"
+                className="w-12 h-12 hover:opacity-75 transition duration-300"
+              />
+              <span className="mt-2 text-gray-100">AWS</span>
             </div>
           </div>
         </div>
