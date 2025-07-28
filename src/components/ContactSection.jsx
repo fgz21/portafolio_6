@@ -13,7 +13,7 @@ const ContactSection = () => {
       <div className="container mx-auto text-center">
         
         <h2 className="text-7xl text-blue-700 font-punk text-center mb-12" style={{ fontFamily: 'Permanent Marker, cursive' }}>
-        Projects
+        Contact and more projects
       </h2>
 
         <div className="flex justify-center space-x-4">
